@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts (wired up via next/font in layout.tsx) */
+  --font-sans: var(--font-open-sans), system-ui, sans-serif;
+  --font-display: var(--font-poppins), system-ui, sans-serif;
+
+  /* Brand palette (from the design tokens) */
+  --color-ink: #1e2444;
+  --color-heading: #263257;
+  --color-slate: #3a4257;
+  --color-brand: #86bf6b;
+  --color-brand-hover: #79b25c;
+  --color-brand-active: #5f9440;
+  --color-band: #7aa64a;
+  --color-body: #7b6f63;
+  --color-body-strong: #5a5348;
+  --color-muted: #8a8172;
+  --color-muted-2: #9a917f;
+  --color-cardbody: #b9bccb;
+  --color-linkblue: #6a9fd8;
+  --color-footer: #c7cad6;
+  --color-lightgrey: #f4f5f7;
+  --color-navpill: #eeeeee;
+  --color-facebook: #4267b2;
+  --color-inputborder: #d8dbe2;
+  --color-req: #c0562f;
+  --color-hero-base: #41504a;
+  --color-success-bg: #eef6e7;
+  --color-success-border: #b9dca0;
+  --color-menu-hover: #f2f6ee;
+
+  /* Content max-widths (max-w-shell) */
+  --container-shell: 1360px;
+
+  /* Nav collapses to a hamburger below this width */
+  --breakpoint-nav: 960px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-ink);
+  background: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Inline body links inherit the blue link colour */
+.prose-link {
+  color: var(--color-linkblue);
+}
+.prose-link:hover {
+  text-decoration: underline;
+}
