@@ -27,7 +27,7 @@ export default function GalleryPage() {
         image="/images/campfire.jpg"
         imageAlt="Team members around a campfire in the valley"
       >
-        <p className="m-0 mt-3 text-[16px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
+        <p className="m-0 mt-3 text-[17px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           See images below from some of our recent trips.
         </p>
       </Hero>

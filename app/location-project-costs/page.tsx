@@ -59,7 +59,7 @@ export default function LocationPage() {
         image="/images/dawn-camelot.jpg"
         imageAlt="Dawn over the Camelot Valley, Fiordland"
       >
-        <p className="m-0 mt-[18px] max-w-[530px] text-[16px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
+        <p className="m-0 mt-[18px] max-w-[530px] text-[17px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           Our strategy is to establish trap lines adjacent to the Whio and Takahe protection areas in Fiordland west of
           Te Anau so they complement DOC’s existing conservation efforts.
         </p>
@@ -80,7 +80,7 @@ export default function LocationPage() {
           </div>
           <div>
             <SectionHeading gap={22}>Locations and Project Estimates</SectionHeading>
-            <p className="m-0 text-[15px] leading-[1.7] text-body">
+            <p className="m-0 text-[17px] leading-[1.7] text-ink">
               Our strategy is to establish trap lines adjacent to the Whio and Takahe protection areas in Fiordland west
               of Te Anau so they complement DOC’s existing conservation efforts. The first line was established in the
               Cozette/Camelot Valley west of Te Anau in October 2016 with 250 traps along 13km of river. The kill count

@@ -54,13 +54,13 @@ export default function ContactPage() {
               {involvementBlurbs.map((b) => (
                 <div key={b.title}>
                   <h3
-                    className={`mb-[5px] font-display text-[17px] text-heading ${
+                    className={`mb-[5px] font-display text-[24px] text-heading ${
                       b.italic ? "font-bold italic" : "font-extrabold"
                     }`}
                   >
                     {b.title}
                   </h3>
-                  <p className="m-0 text-[15px] leading-[1.6] text-body">{b.body}</p>
+                  <p className="m-0 text-[17px] leading-[1.6] text-ink">{b.body}</p>
                 </div>
               ))}
               <a

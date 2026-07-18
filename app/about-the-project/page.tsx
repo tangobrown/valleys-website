@@ -23,7 +23,7 @@ export default function AboutPage() {
         image="/images/belvedere-falls.jpg"
         imageAlt="Belvedere Falls in flood, Fiordland"
       >
-        <p className="m-0 mt-[14px] max-w-[440px] text-[16px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
+        <p className="m-0 mt-[14px] max-w-[440px] text-[17px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
           These projects aim to adjust the balance in favour of our birdlife by trapping predators in areas currently
           without any control measures.
         </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
           </div>
           <div>
             <SectionHeading>What is the Valleys Project?</SectionHeading>
-            <p className="m-0 text-[15px] leading-[1.7] text-body">
+            <p className="m-0 text-[17px] leading-[1.7] text-ink">
               The “VALLEYS PROJECT” offers private individuals and corporates the opportunity to undertake significant
               yet affordable conservation projects in partnership with{" "}
               <a href={docUrl} target="_blank" rel="noopener noreferrer" className="prose-link">
@@ -63,11 +63,11 @@ export default function AboutPage() {
           {/* Row 2: Our Philosophy | 3 men */}
           <div>
             <SectionHeading>Our Philosophy</SectionHeading>
-            <p className="m-0 text-[15px] leading-[1.7] text-body">
+            <p className="m-0 text-[17px] leading-[1.7] text-ink">
               Our central philosophy is to develop amongst groups undertaking predator control a proprietary interest
               in, and sense of ownership of, geographically distinct areas of manageable size within the Conservation
               Estate. The initial focus is on Fiordland valleys but the model could be utilised in other areas of the
-              Conservation Estate. Ideally groups will “<strong className="text-body-strong">Adopt a Valley</strong>” from
+              Conservation Estate. Ideally groups will “<strong>Adopt a Valley</strong>” from
               a selection chosen by DOC, provide the necessary finance, set out the traps, and then regularly service the
               equipment. The{" "}
               <a href="#committee" className="prose-link">
@@ -90,7 +90,7 @@ export default function AboutPage() {
           <div className="hidden md:block" />
           <div>
             <SectionHeading>Everyone can get involved</SectionHeading>
-            <p className="m-0 text-[15px] leading-[1.7] text-body">
+            <p className="m-0 text-[17px] leading-[1.7] text-ink">
               At a Corporate level, the VALLEYS Project offers businesses the opportunity to be better citizens and to
               enjoy prestige advertising linked to activities which are at the forefront of public interest. Involving
               staff in conservation work is the ultimate team building strategy and getting them out into country they
@@ -101,7 +101,7 @@ export default function AboutPage() {
           {/* Row 4: Further more | kea */}
           <div>
             <SectionHeading>Further more</SectionHeading>
-            <p className="m-0 text-[15px] leading-[1.7] text-body">
+            <p className="m-0 text-[17px] leading-[1.7] text-ink">
               Trips into the areas concerned are required every 6 months to bait and recharge the traps. It is a great
               opportunity for fishermen, hunters, ornithologists, trampers, and others with connection to our wilderness
               areas to get out there regularly with a purpose and a mission. It is open to all –{" "}
@@ -113,7 +113,7 @@ export default function AboutPage() {
               <a href="https://nznaturefund.org/" target="_blank" rel="noopener noreferrer" className="prose-link">
                 NZ Nature Fund
               </a>{" "}
-              – are <strong className="text-body-strong">TAX DEDUCTIBLE!</strong> DOC oversees all aspects of these
+              – are <strong>TAX DEDUCTIBLE!</strong> DOC oversees all aspects of these
               activities, directs strategy and assists with logistics.
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                     className="object-cover object-top"
                   />
                 </div>
-                <h3 className="mb-1 font-display text-[17px] font-bold text-heading">{m.name}</h3>
+                <h3 className="mb-1 font-display text-[24px] font-bold text-heading">{m.name}</h3>
                 <p className="m-0 text-[14px] italic text-muted">{m.role}</p>
               </div>
             ))}
