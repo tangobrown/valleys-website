@@ -1,11 +1,17 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 interface HeroProps {
   title: string;
   /** Desktop hero height in px (scales down on mobile via clamp). */
   height: number;
-  /** Background fill — a next/image or a Placeholder, absolutely positioned. */
-  background: ReactNode;
+  /** Background photo path under /public. */
+  image: string;
+  imageAlt: string;
+  /** Set on the LCP hero (home page) to preload it. */
+  priority?: boolean;
+  /** CSS object-position for art direction, e.g. "50% 35%". */
+  imagePosition?: string;
   /** Subhead / CTA rendered under the H1. */
   children?: ReactNode;
   /** H1 size in px (desktop). */
@@ -34,7 +40,10 @@ function WaveEdge() {
 export default function Hero({
   title,
   height,
-  background,
+  image,
+  imageAlt,
+  priority = false,
+  imagePosition,
   children,
   titleSize = 46,
   titleMaxWidth,
@@ -55,7 +64,17 @@ export default function Hero({
 
   return (
     <section className="relative w-full overflow-hidden bg-hero-base" style={heightStyle}>
-      <div className="absolute inset-0">{background}</div>
+      <div className="absolute inset-0">
+        <Image
+          src={image}
+          alt={imageAlt}
+          fill
+          priority={priority}
+          sizes="100vw"
+          className="object-cover"
+          style={imagePosition ? { objectPosition: imagePosition } : undefined}
+        />
+      </div>
       <div className={`absolute inset-0 ${overlayClass}`} aria-hidden />
       <div className="relative mx-auto flex h-full max-w-shell flex-col justify-center px-5 pb-10 sm:px-8">
         <h1

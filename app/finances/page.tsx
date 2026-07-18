@@ -1,7 +1,7 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
-import Placeholder from "@/components/Placeholder";
 import { donateUrl } from "@/lib/nav";
 
 export const metadata: Metadata = { title: "Finances" };
@@ -9,7 +9,13 @@ export const metadata: Metadata = { title: "Finances" };
 export default function FinancesPage() {
   return (
     <>
-      <Hero title="Finances" height={400} titleSize={46} background={<Placeholder label="River banner photo" />}>
+      <Hero
+        title="Finances"
+        height={400}
+        titleSize={46}
+        image="/images/river-crossing.jpg"
+        imageAlt="Team members crossing a Fiordland river"
+      >
         <p className="m-0 mt-4 max-w-[500px] text-[15px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           The VALLEYS PROJECT relies upon voluntary contributions of time and money from motivated people.
         </p>
@@ -18,8 +24,14 @@ export default function FinancesPage() {
       <section className="bg-white px-5 pb-10 pt-[78px] sm:px-8">
         <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-x-[60px] gap-y-[70px] md:grid-cols-2">
           {/* Row 1: whio | Volunteer Contributions */}
-          <div className="self-start">
-            <Placeholder label="Whio (blue duck) photo" className="h-[220px]" />
+          <div className="relative h-[220px] self-start">
+            <Image
+              src="/images/whio-closeup.jpg"
+              alt="A whio (blue duck) standing on river rocks"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
           </div>
           <div>
             <SectionHeading gap={22}>Volunteer Contributions</SectionHeading>
@@ -59,8 +71,14 @@ export default function FinancesPage() {
               DONATE NOW
             </a>
           </div>
-          <div className="self-start">
-            <Placeholder label="Helicopter photo" className="h-[200px]" />
+          <div className="relative h-[200px] self-start">
+            <Image
+              src="/images/helicopter.jpg"
+              alt="A helicopter landing on a riverbed to service trap lines"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
           </div>
 
           {/* Row 3: empty | Trap line costs */}

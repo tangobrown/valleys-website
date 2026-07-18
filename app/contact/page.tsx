@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import Placeholder from "@/components/Placeholder";
 import ContactForm from "@/components/ContactForm";
 import { donateUrl } from "@/lib/nav";
 
@@ -33,7 +32,8 @@ export default function ContactPage() {
         title="Contact/Get Involved"
         height={370}
         titleSize={46}
-        background={<Placeholder label="River banner photo" />}
+        image="/images/belvedere-falls.jpg"
+        imageAlt="Belvedere Falls in flood, Fiordland"
       >
         <a
           href="mailto:valleys@xtra.co.nz"

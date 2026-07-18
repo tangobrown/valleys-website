@@ -142,22 +142,7 @@ export function MapPin(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-/* ---- Placeholder camera glyph ---- */
-export function CameraIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>
-      <path
-        d="M3 8.5 A2 2 0 0 1 5 6.5 H7.2 L8.4 4.5 H15.6 L16.8 6.5 H19 A2 2 0 0 1 21 8.5 V17.5 A2 2 0 0 1 19 19.5 H5 A2 2 0 0 1 3 17.5 Z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-      <circle cx="12" cy="12.8" r="3.4" stroke="currentColor" strokeWidth="1.6" />
-    </svg>
-  );
-}
-
-/* ---- Facebook wordmark f (for header button, optional) ---- */
+/* ---- Mobile nav ---- */
 export function MenuIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden {...props}>

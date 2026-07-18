@@ -36,16 +36,9 @@ export default function HomePage() {
         titleMaxWidth={560}
         wave={false}
         overlay="light"
-        background={
-          <Image
-            src="/images/valleys-project-hero.jpg"
-            alt="A tui perched on a flowering flax stem"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-        }
+        image="/images/valleys-project-hero.jpg"
+        imageAlt="A tui perched on a flowering flax stem"
+        priority
       >
         <Link
           href="/contact"

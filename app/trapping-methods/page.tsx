@@ -2,7 +2,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
-import Placeholder from "@/components/Placeholder";
 
 export const metadata: Metadata = { title: "Trapping methods" };
 
@@ -13,7 +12,8 @@ export default function TrappingPage() {
         title="Trapping methods"
         height={400}
         titleSize={46}
-        background={<Placeholder label="River banner photo" />}
+        image="/images/valley-river.jpg"
+        imageAlt="A bush-clad Fiordland valley and river bed"
       >
         <p className="m-0 mt-4 max-w-[520px] text-[15px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           The principle methodology for the VALLEYS PROJECT involves establishing lines of traps for stoats and rats
@@ -26,8 +26,8 @@ export default function TrappingPage() {
           {/* Row 1: stoat | Trapping Strategy */}
           <div className="self-start">
             <Image
-              src="https://valleys.co.nz/wp-content/uploads/2017/08/4-One-of-the-stoats-1024x512.jpg"
-              alt="One of the stoats"
+              src="/images/stoat-trap.jpg"
+              alt="A Goodnature A24 self-resetting trap mounted on a tree, with a caught stoat below"
               width={1024}
               height={512}
               sizes="(max-width: 768px) 100vw, 490px"
@@ -82,13 +82,25 @@ export default function TrappingPage() {
               valley floors to assist Kiwi and our other iconic species.
             </p>
           </div>
-          <div className="self-start">
-            <Placeholder label="Solo Whio photo" className="h-[230px]" />
+          <div className="relative h-[230px] self-start">
+            <Image
+              src="/images/solo-whio.jpg"
+              alt="A lone whio (blue duck) standing in a shallow river"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
           </div>
 
           {/* Row 3: trail cam | Trapping equipment */}
-          <div className="self-start">
-            <Placeholder label="Trail cam deer photo" className="h-[230px]" />
+          <div className="relative h-[230px] self-start">
+            <Image
+              src="/images/trail-cam-deer.jpg"
+              alt="Trail camera image of a deer beside a trap mounted on a mossy tree"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
           </div>
           <div>
             <SectionHeading gap={22}>Trapping equipment</SectionHeading>
@@ -127,8 +139,14 @@ export default function TrappingPage() {
               shelter.
             </p>
           </div>
-          <div className="self-start">
-            <Placeholder label="Initial team, Cozette Valley" className="h-[230px]" />
+          <div className="relative h-[230px] self-start">
+            <Image
+              src="/images/team-camp.jpg"
+              alt="The initial team at camp in the Cozette Valley"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

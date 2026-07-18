@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
-import Placeholder from "@/components/Placeholder";
 import SectionHeading from "@/components/SectionHeading";
 import { GroupIcon } from "@/components/icons";
 import { docUrl } from "@/lib/nav";
@@ -9,9 +8,9 @@ import { docUrl } from "@/lib/nav";
 export const metadata: Metadata = { title: "Adopt a Valley" };
 
 const committee = [
-  { name: "Michael Fisk", role: "Ophthalmologist" },
-  { name: "Mark Smith", role: "Architect" },
-  { name: "Peter King", role: "Engineer" },
+  { name: "Michael Fisk", role: "Ophthalmologist", photo: "/images/michael-fisk.jpg" },
+  { name: "Mark Smith", role: "Architect", photo: "/images/mark-smith.jpg" },
+  { name: "Peter King", role: "Engineer", photo: "/images/peter-king.jpg" },
 ];
 
 export default function AboutPage() {
@@ -21,7 +20,8 @@ export default function AboutPage() {
         title="Adopt a Valley!"
         height={350}
         titleSize={44}
-        background={<Placeholder label="River banner photo" />}
+        image="/images/belvedere-falls.jpg"
+        imageAlt="Belvedere Falls in flood, Fiordland"
       >
         <p className="m-0 mt-[14px] max-w-[440px] text-[15px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
           These projects aim to adjust the balance in favour of our birdlife by trapping predators in areas currently
@@ -34,10 +34,10 @@ export default function AboutPage() {
           {/* Row 1: blue duck | What is */}
           <div className="self-start">
             <Image
-              src="https://valleys.co.nz/wp-content/uploads/2017/08/2-Blue-Duck-1.jpg"
-              alt="Two blue ducks on water"
-              width={900}
-              height={600}
+              src="/images/blue-ducks.jpg"
+              alt="Two whio (blue ducks) on a clear river"
+              width={1000}
+              height={667}
               sizes="(max-width: 768px) 100vw, 490px"
               className="block h-auto w-full"
             />
@@ -76,8 +76,14 @@ export default function AboutPage() {
               can help with relationships, logistics and equipment.
             </p>
           </div>
-          <div className="self-start">
-            <Placeholder label="3 men in a valley" className="h-[230px]" />
+          <div className="relative h-[230px] self-start">
+            <Image
+              src="/images/three-men-valley.jpg"
+              alt="Three team members standing in a Fiordland river"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
           </div>
 
           {/* Row 3: empty | Everyone can get involved */}
@@ -111,8 +117,14 @@ export default function AboutPage() {
               activities, directs strategy and assists with logistics.
             </p>
           </div>
-          <div className="self-start">
-            <Placeholder label="Kea photo" className="h-[200px] max-w-[320px]" />
+          <div className="relative h-[200px] max-w-[320px] self-start">
+            <Image
+              src="/images/kea.jpg"
+              alt="A kea perched on a mossy log"
+              fill
+              sizes="320px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -127,7 +139,15 @@ export default function AboutPage() {
           <div className="mx-auto grid max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-3">
             {committee.map((m) => (
               <div key={m.name} className="text-left">
-                <Placeholder label={m.name} className="mb-[14px] h-[120px]" />
+                <div className="relative mb-[14px] h-[120px] overflow-hidden">
+                  <Image
+                    src={m.photo}
+                    alt={`${m.name}, ${m.role}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 240px"
+                    className="object-cover object-top"
+                  />
+                </div>
                 <h3 className="mb-1 font-display text-[16px] font-bold text-heading">{m.name}</h3>
                 <p className="m-0 text-[13px] italic text-muted">{m.role}</p>
               </div>

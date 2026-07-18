@@ -2,7 +2,6 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import SectionHeading from "@/components/SectionHeading";
-import Placeholder from "@/components/Placeholder";
 import { MapPin } from "@/components/icons";
 
 export const metadata: Metadata = { title: "Location & Project Costs" };
@@ -57,7 +56,8 @@ export default function LocationPage() {
         title="Location & Project Costs"
         height={450}
         titleSize={46}
-        background={<Placeholder label="River banner photo" />}
+        image="/images/dawn-camelot.jpg"
+        imageAlt="Dawn over the Camelot Valley, Fiordland"
       >
         <p className="m-0 mt-[18px] max-w-[530px] text-[15px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           Our strategy is to establish trap lines adjacent to the Whio and Takahe protection areas in Fiordland west of
@@ -70,10 +70,10 @@ export default function LocationPage() {
         <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-[60px] md:grid-cols-2">
           <div>
             <Image
-              src="https://valleys.co.nz/wp-content/uploads/2017/08/2-Blue-Duck-1.jpg"
-              alt="Two blue ducks on water"
-              width={900}
-              height={600}
+              src="/images/blue-ducks.jpg"
+              alt="Two whio (blue ducks) on a clear river"
+              width={1000}
+              height={667}
               sizes="(max-width: 768px) 100vw, 490px"
               className="block h-auto w-full"
             />
