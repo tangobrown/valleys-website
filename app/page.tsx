@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import Placeholder from "@/components/Placeholder";
 import { FinancesIcon, LocationIcon, TrappingIcon } from "@/components/icons";
 import { docUrl } from "@/lib/nav";
 import type { ReactNode } from "react";
@@ -73,7 +72,14 @@ export default function HomePage() {
         <div className="absolute inset-x-0 bottom-0 z-0 h-[170px] bg-lightgrey" aria-hidden />
         <div className="relative z-[1] mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-14 px-5 pt-[52px] sm:px-8 md:grid-cols-2">
           <div>
-            <Placeholder label="Fantail photo" className="h-[262px]" />
+            <Image
+              src="/images/fantail.jpg"
+              alt="A fantail (pīwakawaka) perched on a mossy branch in native bush"
+              width={800}
+              height={533}
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="h-[262px] w-full object-cover"
+            />
           </div>
           <div className="text-[15px] leading-[1.65] text-body">
             <p className="mb-[18px]">
