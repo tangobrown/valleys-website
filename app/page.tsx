@@ -39,8 +39,8 @@ export default function HomePage() {
         overlay="light"
         background={
           <Image
-            src="https://valleys.co.nz/wp-content/uploads/2022/05/bird-in-the-tree.jpg"
-            alt="Tui perched on flax"
+            src="/images/valleys-project-hero.jpg"
+            alt="A tui perched on a flowering flax stem"
             fill
             priority
             sizes="100vw"
