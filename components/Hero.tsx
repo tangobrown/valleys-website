@@ -45,7 +45,7 @@ export default function Hero({
   priority = false,
   imagePosition,
   children,
-  titleSize = 46,
+  titleSize = 50,
   titleMaxWidth,
   wave = true,
   overlay = "soft",
@@ -54,7 +54,7 @@ export default function Hero({
     height: `clamp(${Math.round(height * 0.6)}px, ${(height / 12).toFixed(1)}vw, ${height}px)`,
   };
   const titleStyle = {
-    fontSize: `clamp(${Math.max(26, Math.round(titleSize * 0.58))}px, ${(titleSize / 8.5).toFixed(1)}vw, ${titleSize}px)`,
+    fontSize: `clamp(${Math.max(28, Math.round(titleSize * 0.58))}px, ${(titleSize / 8.5).toFixed(1)}vw, ${titleSize}px)`,
     maxWidth: titleMaxWidth ? `${titleMaxWidth}px` : undefined,
   };
   const overlayClass =

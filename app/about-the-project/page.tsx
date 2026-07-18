@@ -19,11 +19,11 @@ export default function AboutPage() {
       <Hero
         title="Adopt a Valley!"
         height={350}
-        titleSize={44}
+        titleSize={48}
         image="/images/belvedere-falls.jpg"
         imageAlt="Belvedere Falls in flood, Fiordland"
       >
-        <p className="m-0 mt-[14px] max-w-[440px] text-[15px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
+        <p className="m-0 mt-[14px] max-w-[440px] text-[16px] font-bold leading-[1.5] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">
           These projects aim to adjust the balance in favour of our birdlife by trapping predators in areas currently
           without any control measures.
         </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
           </div>
           <div>
             <SectionHeading>What is the Valleys Project?</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               The “VALLEYS PROJECT” offers private individuals and corporates the opportunity to undertake significant
               yet affordable conservation projects in partnership with{" "}
               <a href={docUrl} target="_blank" rel="noopener noreferrer" className="prose-link">
@@ -63,7 +63,7 @@ export default function AboutPage() {
           {/* Row 2: Our Philosophy | 3 men */}
           <div>
             <SectionHeading>Our Philosophy</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               Our central philosophy is to develop amongst groups undertaking predator control a proprietary interest
               in, and sense of ownership of, geographically distinct areas of manageable size within the Conservation
               Estate. The initial focus is on Fiordland valleys but the model could be utilised in other areas of the
@@ -90,7 +90,7 @@ export default function AboutPage() {
           <div className="hidden md:block" />
           <div>
             <SectionHeading>Everyone can get involved</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               At a Corporate level, the VALLEYS Project offers businesses the opportunity to be better citizens and to
               enjoy prestige advertising linked to activities which are at the forefront of public interest. Involving
               staff in conservation work is the ultimate team building strategy and getting them out into country they
@@ -101,7 +101,7 @@ export default function AboutPage() {
           {/* Row 4: Further more | kea */}
           <div>
             <SectionHeading>Further more</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               Trips into the areas concerned are required every 6 months to bait and recharge the traps. It is a great
               opportunity for fishermen, hunters, ornithologists, trampers, and others with connection to our wilderness
               areas to get out there regularly with a purpose and a mission. It is open to all –{" "}
@@ -133,7 +133,7 @@ export default function AboutPage() {
       <section id="committee" className="scroll-mt-24 bg-lightgrey px-5 pb-[74px] pt-16 sm:px-8">
         <div className="mx-auto max-w-[940px] text-center">
           <GroupIcon className="mx-auto mb-[14px] block h-10 w-10 text-brand" />
-          <h2 className="mb-[46px] font-display text-[19px] font-bold uppercase tracking-[2px] text-heading">
+          <h2 className="mb-[46px] font-display text-[21px] font-bold uppercase tracking-[2px] text-heading">
             Valleys Group Committee
           </h2>
           <div className="mx-auto grid max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-3">
@@ -148,8 +148,8 @@ export default function AboutPage() {
                     className="object-cover object-top"
                   />
                 </div>
-                <h3 className="mb-1 font-display text-[16px] font-bold text-heading">{m.name}</h3>
-                <p className="m-0 text-[13px] italic text-muted">{m.role}</p>
+                <h3 className="mb-1 font-display text-[17px] font-bold text-heading">{m.name}</h3>
+                <p className="m-0 text-[14px] italic text-muted">{m.role}</p>
               </div>
             ))}
           </div>

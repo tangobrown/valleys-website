@@ -16,7 +16,7 @@ export default function GetInvolved() {
         aria-hidden
       />
       <div className="relative z-[2] mx-auto max-w-[940px] text-center">
-        <h2 className="mb-[42px] font-display text-[26px] font-bold text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.25)] sm:text-[32px]">
+        <h2 className="mb-[42px] font-display text-[28px] font-bold text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.25)] sm:text-[35px]">
           How can you get involved?
         </h2>
         <div className="grid auto-rows-fr grid-cols-2 gap-5 nav:grid-cols-4">
@@ -27,7 +27,7 @@ export default function GetInvolved() {
               className="flex flex-col items-center justify-center bg-ink px-6 pb-11 pt-12 text-center text-white transition-transform hover:-translate-y-1"
             >
               <span className="mb-6 text-white">{c.icon}</span>
-              <span className="font-display text-[13px] font-bold uppercase leading-[1.5] tracking-[1px] text-white">
+              <span className="font-display text-[14px] font-bold uppercase leading-[1.5] tracking-[1px] text-white">
                 {c.line1}
                 <br />
                 {c.line2}

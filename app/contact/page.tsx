@@ -31,13 +31,13 @@ export default function ContactPage() {
       <Hero
         title="Contact/Get Involved"
         height={370}
-        titleSize={46}
+        titleSize={50}
         image="/images/belvedere-falls.jpg"
         imageAlt="Belvedere Falls in flood, Fiordland"
       >
         <a
           href="mailto:valleys@xtra.co.nz"
-          className="mt-[14px] font-sans text-[16px] font-bold text-[#c9e6b5] [text-shadow:0_1px_8px_rgba(0,0,0,0.45)] hover:underline"
+          className="mt-[14px] font-sans text-[17px] font-bold text-[#c9e6b5] [text-shadow:0_1px_8px_rgba(0,0,0,0.45)] hover:underline"
         >
           valleys@xtra.co.nz
         </a>
@@ -54,20 +54,20 @@ export default function ContactPage() {
               {involvementBlurbs.map((b) => (
                 <div key={b.title}>
                   <h3
-                    className={`mb-[5px] font-display text-[16px] text-heading ${
+                    className={`mb-[5px] font-display text-[17px] text-heading ${
                       b.italic ? "font-bold italic" : "font-extrabold"
                     }`}
                   >
                     {b.title}
                   </h3>
-                  <p className="m-0 text-[13.5px] leading-[1.6] text-body">{b.body}</p>
+                  <p className="m-0 text-[15px] leading-[1.6] text-body">{b.body}</p>
                 </div>
               ))}
               <a
                 href={donateUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 inline-block self-start rounded-[3px] bg-brand px-7 py-[13px] font-display text-[13px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
+                className="mt-1 inline-block self-start rounded-[3px] bg-brand px-7 py-[13px] font-display text-[14px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
               >
                 DONATE NOW
               </a>

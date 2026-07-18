@@ -13,7 +13,7 @@ const activityOptions = ["Fishing", "Tramping", "Deerstalking", "Birdwatching"];
 const ageOptions = ["< 20 yr", "21-30 yr", "31-40 yr", "41-50 yr", "51-60 yr", "61-70 yr", "> 70 yr"];
 
 const inputBase =
-  "w-full rounded-[3px] border bg-white px-[13px] py-[11px] font-sans text-[14px] text-slate outline-none transition-colors focus:border-brand";
+  "w-full rounded-[3px] border bg-white px-[13px] py-[11px] font-sans text-[15px] text-slate outline-none transition-colors focus:border-brand";
 
 type Errors = Partial<Record<"name" | "email" | "phone" | "town", string>>;
 
@@ -51,10 +51,10 @@ export default function ContactForm() {
       <div>
         <SectionHeading gap={28}>Send a message</SectionHeading>
         <div className="rounded-[4px] border border-success-border bg-success-bg px-6 py-[22px]">
-          <p className="mb-[6px] font-display text-[16px] font-semibold text-[#4d7a2e]">
+          <p className="mb-[6px] font-display text-[17px] font-semibold text-[#4d7a2e]">
             Thank you — your message has been sent.
           </p>
-          <p className="m-0 text-[14px] text-[#5a6b4a]">
+          <p className="m-0 text-[15px] text-[#5a6b4a]">
             We’ll be in touch soon about getting you involved with the VALLEYS PROJECT.
           </p>
         </div>
@@ -77,10 +77,10 @@ export default function ContactForm() {
 
         {/* Preferred Involvement */}
         <fieldset className="m-0 border-0 p-0">
-          <legend className="mb-3 block font-sans text-[13px] font-semibold text-slate">Preferred Involvement</legend>
+          <legend className="mb-3 block font-sans text-[14px] font-semibold text-slate">Preferred Involvement</legend>
           <div className="flex flex-col gap-[11px]">
             {involvementOptions.map((opt) => (
-              <label key={opt} className="flex cursor-pointer items-center gap-[10px] text-[14px] text-slate">
+              <label key={opt} className="flex cursor-pointer items-center gap-[10px] text-[15px] text-slate">
                 <input
                   type="checkbox"
                   name="involvement"
@@ -91,17 +91,17 @@ export default function ContactForm() {
               </label>
             ))}
           </div>
-          <p className="m-0 mt-[10px] font-sans text-[12.5px] italic text-muted-2">Tick more than one box if appropriate</p>
+          <p className="m-0 mt-[10px] font-sans text-[13.5px] italic text-muted-2">Tick more than one box if appropriate</p>
         </fieldset>
 
         {/* Favoured Recreational Activities */}
         <fieldset className="m-0 border-0 p-0">
-          <legend className="mb-3 block font-sans text-[13px] font-semibold text-slate">
+          <legend className="mb-3 block font-sans text-[14px] font-semibold text-slate">
             Favoured Recreational Activities
           </legend>
           <div className="grid grid-cols-1 gap-x-5 gap-y-[11px] sm:grid-cols-2">
             {activityOptions.map((opt) => (
-              <label key={opt} className="flex cursor-pointer items-center gap-[10px] text-[14px] text-slate">
+              <label key={opt} className="flex cursor-pointer items-center gap-[10px] text-[15px] text-slate">
                 <input type="checkbox" name="activities" value={opt} className="h-4 w-4 accent-brand" />
                 {opt}
               </label>
@@ -111,10 +111,10 @@ export default function ContactForm() {
 
         {/* Age Range */}
         <fieldset className="m-0 border-0 p-0">
-          <legend className="mb-3 block font-sans text-[13px] font-semibold text-slate">Age Range</legend>
+          <legend className="mb-3 block font-sans text-[14px] font-semibold text-slate">Age Range</legend>
           <div className="flex flex-wrap gap-x-[22px] gap-y-[11px]">
             {ageOptions.map((opt) => (
-              <label key={opt} className="flex cursor-pointer items-center gap-2 text-[14px] text-slate">
+              <label key={opt} className="flex cursor-pointer items-center gap-2 text-[15px] text-slate">
                 <input type="radio" name="agerange" value={opt} className="h-[15px] w-[15px] accent-brand" />
                 {opt}
               </label>
@@ -124,7 +124,7 @@ export default function ContactForm() {
 
         {/* Notes */}
         <div>
-          <label htmlFor="notes" className="mb-[7px] block font-sans text-[13px] font-semibold text-slate">
+          <label htmlFor="notes" className="mb-[7px] block font-sans text-[14px] font-semibold text-slate">
             Notes
           </label>
           <textarea
@@ -139,7 +139,7 @@ export default function ContactForm() {
         <div>
           <button
             type="submit"
-            className="cursor-pointer rounded-[3px] bg-brand px-10 py-[14px] font-display text-[14px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
+            className="cursor-pointer rounded-[3px] bg-brand px-10 py-[14px] font-display text-[15px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
           >
             Submit
           </button>
@@ -164,7 +164,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-[7px] block font-sans text-[13px] font-semibold text-slate">
+      <label htmlFor={name} className="mb-[7px] block font-sans text-[14px] font-semibold text-slate">
         {label} {required && <span className="text-req">*</span>}
       </label>
       <input
@@ -174,7 +174,7 @@ function Field({
         aria-invalid={error ? true : undefined}
         className={`${inputBase} ${error ? "border-req" : "border-inputborder"}`}
       />
-      {error && <p className="m-0 mt-1 text-[12.5px] text-req">{error}</p>}
+      {error && <p className="m-0 mt-1 text-[13.5px] text-req">{error}</p>}
     </div>
   );
 }

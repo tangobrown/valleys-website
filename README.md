@@ -27,22 +27,26 @@ Other scripts: `npm run build`, `npm run start`, `npm run lint`.
 
 ## Structure
 
-- `app/layout.tsx` — shared shell: fonts (Poppins + Open Sans via `next/font`), `Header`,
+- `app/layout.tsx` — shared shell: font (Host Grotesk via `next/font`), `Header`,
   the green "get involved" band, and `Footer`.
 - `app/*/page.tsx` — one route per page; copy is transcribed verbatim from the handoff.
 - `components/` — `Header` (sticky nav, About dropdown, mobile drawer), `Hero`,
-  `GetInvolved`, `SectionHeading`, `Placeholder`, `ContactForm` (client), `icons`.
+  `GetInvolved`, `SectionHeading`, `ContactForm` (client), `icons`.
 - `app/globals.css` — design tokens as Tailwind v4 `@theme` variables (colors, fonts,
-  `max-w-shell`, the `nav:` breakpoint at 960px).
+  `max-w-shell`, the `nav:` breakpoint at 1040px).
+
+## Typography
+
+Everything is set in **Host Grotesk** (variable, 300–800, with italics), self-hosted via
+`next/font/google`. Both `--font-display` and `--font-sans` resolve to it, so the
+`font-display` / `font-sans` classes still describe intent if the families ever diverge.
 
 ## Images
 
-Real project photos referenced by the prototype are loaded from `valleys.co.nz` via
-`next/image` (allow-listed in `next.config.mjs`): the home tui hero, the blue-duck, and the
-stoat. Every other photo is a labelled **`<Placeholder>`** marking where a real asset belongs.
-Swap each `<Placeholder label="…">` for `<Image>` with the client's photo. The 8 valley tiles
-on the Location page and the Location/Finances/etc. hero banners are also placeholders / SVG
-stand-ins per the handoff.
+All photos are local under `public/images/` and served through `next/image` — there are no
+remote image hosts, so `next.config.mjs` needs no `remotePatterns`. Only the home hero is
+marked `priority`; everything else lazy-loads. The 8 valley tiles on the Location page remain
+SVG topographic stand-ins pending real DOC map thumbnails.
 
 ## Contact form
 

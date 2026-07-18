@@ -10,8 +10,8 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center gap-3" aria-label="Valleys Project — home">
       <span className="flex flex-col leading-none">
-        <span className="font-display text-[26px] font-extrabold tracking-[0.5px] text-ink">VALLEYS</span>
-        <span className="mt-[3px] font-display text-[11px] font-semibold tracking-[5px] text-brand">PROJECT</span>
+        <span className="font-display text-[28px] font-extrabold tracking-[0.5px] text-ink">VALLEYS</span>
+        <span className="mt-[3px] font-display text-[12px] font-semibold tracking-[5px] text-brand">PROJECT</span>
       </span>
       <LogoMark className="block" />
     </Link>
@@ -55,7 +55,7 @@ export default function Header() {
         <Logo />
 
         {/* ---- Desktop nav ---- */}
-        <nav className="hidden items-center gap-1.5 font-display text-[15px] font-medium nav:flex">
+        <nav className="hidden items-center gap-1.5 font-display text-[16px] font-medium nav:flex">
           <Link href="/" className={navPill(isHome)}>
             Home
           </Link>
@@ -94,7 +94,7 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     role="menuitem"
-                    className={`whitespace-nowrap px-5 py-[10px] text-[14px] hover:bg-menu-hover ${
+                    className={`whitespace-nowrap px-5 py-[10px] text-[15px] hover:bg-menu-hover ${
                       current ? "font-semibold text-brand-active" : "font-normal text-ink"
                     }`}
                   >
@@ -143,20 +143,20 @@ export default function Header() {
           />
           <div className="absolute right-0 top-0 flex h-full w-[82%] max-w-[340px] flex-col overflow-y-auto bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-black/5 px-5 py-4">
-              <span className="font-display text-[18px] font-extrabold tracking-[0.5px] text-ink">
-                VALLEYS<span className="ml-1 text-[11px] font-semibold tracking-[3px] text-brand">PROJECT</span>
+              <span className="font-display text-[20px] font-extrabold tracking-[0.5px] text-ink">
+                VALLEYS<span className="ml-1 text-[12px] font-semibold tracking-[3px] text-brand">PROJECT</span>
               </span>
               <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)} className="text-ink">
                 <CloseIcon className="h-6 w-6" />
               </button>
             </div>
 
-            <nav className="flex flex-col gap-1 px-4 py-4 font-display text-[15px] font-medium text-ink">
+            <nav className="flex flex-col gap-1 px-4 py-4 font-display text-[16px] font-medium text-ink">
               <Link href="/" className={`rounded-md px-3 py-3 ${isHome ? "bg-navpill" : ""}`}>
                 Home
               </Link>
 
-              <div className="mt-1 px-3 pb-1 pt-2 text-[12px] font-semibold uppercase tracking-[1px] text-muted">
+              <div className="mt-1 px-3 pb-1 pt-2 text-[13px] font-semibold uppercase tracking-[1px] text-muted">
                 About the Project
               </div>
               {aboutMenu.map((item) => {
@@ -165,7 +165,7 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`rounded-md px-5 py-3 text-[14px] ${
+                    className={`rounded-md px-5 py-3 text-[15px] ${
                       current ? "font-semibold text-brand-active" : "font-normal"
                     }`}
                   >

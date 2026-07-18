@@ -41,7 +41,7 @@ function ValleyTile({ name }: { name: string }) {
       <div className="absolute inset-0 bg-[#2c3f52] opacity-55" />
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-[14px]">
         <MapPin className="h-[30px] w-[30px] text-white" />
-        <span className="text-center font-display text-[13px] font-bold uppercase leading-[1.3] tracking-[1.2px] text-white">
+        <span className="text-center font-display text-[14px] font-bold uppercase leading-[1.3] tracking-[1.2px] text-white">
           {name}
         </span>
       </div>
@@ -55,11 +55,11 @@ export default function LocationPage() {
       <Hero
         title="Location & Project Costs"
         height={450}
-        titleSize={46}
+        titleSize={50}
         image="/images/dawn-camelot.jpg"
         imageAlt="Dawn over the Camelot Valley, Fiordland"
       >
-        <p className="m-0 mt-[18px] max-w-[530px] text-[15px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
+        <p className="m-0 mt-[18px] max-w-[530px] text-[16px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           Our strategy is to establish trap lines adjacent to the Whio and Takahe protection areas in Fiordland west of
           Te Anau so they complement DOC’s existing conservation efforts.
         </p>
@@ -80,7 +80,7 @@ export default function LocationPage() {
           </div>
           <div>
             <SectionHeading gap={22}>Locations and Project Estimates</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               Our strategy is to establish trap lines adjacent to the Whio and Takahe protection areas in Fiordland west
               of Te Anau so they complement DOC’s existing conservation efforts. The first line was established in the
               Cozette/Camelot Valley west of Te Anau in October 2016 with 250 traps along 13km of river. The kill count

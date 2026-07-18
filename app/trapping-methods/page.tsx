@@ -11,11 +11,11 @@ export default function TrappingPage() {
       <Hero
         title="Trapping methods"
         height={400}
-        titleSize={46}
+        titleSize={50}
         image="/images/valley-river.jpg"
         imageAlt="A bush-clad Fiordland valley and river bed"
       >
-        <p className="m-0 mt-4 max-w-[520px] text-[15px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
+        <p className="m-0 mt-4 max-w-[520px] text-[16px] font-bold leading-[1.55] text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.45)]">
           The principle methodology for the VALLEYS PROJECT involves establishing lines of traps for stoats and rats
           along both sides of rivers at 100m intervals.
         </p>
@@ -36,7 +36,7 @@ export default function TrappingPage() {
           </div>
           <div>
             <SectionHeading gap={22}>Trapping Strategy</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               The principle methodology for the VALLEYS PROJECT involves establishing lines of traps for{" "}
               <a
                 href="http://www.doc.govt.nz/nature/pests-and-threats/animal-pests/stoats/"
@@ -69,7 +69,7 @@ export default function TrappingPage() {
           {/* Row 2: Whio Conservation | whio */}
           <div>
             <SectionHeading gap={22}>Whio Conservation</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               Mature Whio, bred under the protection of existing trap-lines established by DOC, naturally seek fresh
               habitats to establish their own adult territories. Once they move into areas not subject to stoat
               suppression, the chances of their own young suffering death by predation are extreme. Establishing a degree
@@ -104,7 +104,7 @@ export default function TrappingPage() {
           </div>
           <div>
             <SectionHeading gap={22}>Trapping equipment</SectionHeading>
-            <p className="mb-[18px] text-[14px] leading-[1.7] text-body">
+            <p className="mb-[18px] text-[15px] leading-[1.7] text-body">
               It is impractical and expensive to undertake frequent visits to service trap lines in remote areas. The use
               of{" "}
               <a
@@ -120,7 +120,7 @@ export default function TrappingPage() {
               to be undertaken in September to coincide with the first nesting attempts and the alternate visits will
               fall in late March/early April.
             </p>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               <strong className="text-body-strong">Species Monitoring</strong> is directed by DOC. An initial survey of
               the Whio population in the Camelot valley was undertaken in January 2017 identifying 20 resident birds in
               the northern part of the valley – a sizeable population of such an endangered species.
@@ -130,7 +130,7 @@ export default function TrappingPage() {
           {/* Row 4: Commercial opportunities | team */}
           <div>
             <SectionHeading gap={22}>Commercial opportunities</SectionHeading>
-            <p className="m-0 text-[14px] leading-[1.7] text-body">
+            <p className="m-0 text-[15px] leading-[1.7] text-body">
               The existence of a market for Possum fur and skins provides the opportunity to monetise predator control.
               The VALLEYS PROJECT will in time seek to leverage opportunities from this and develop partnerships with
               existing commercial contractors, and also social agencies to benefit those who need opportunities to

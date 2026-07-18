@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Open_Sans, Poppins } from "next/font/google";
+import { Host_Grotesk } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GetInvolved from "@/components/GetInvolved";
 import "./globals.css";
 
-const poppins = Poppins({
+/* Single variable family (300–800) used for both display and body type. */
+const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-open-sans",
+  style: ["normal", "italic"],
+  variable: "--font-host-grotesk",
   display: "swap",
 });
 
@@ -30,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
+    <html lang="en" className={hostGrotesk.variable}>
       <body className="font-sans">
         <Header />
         <main>{children}</main>

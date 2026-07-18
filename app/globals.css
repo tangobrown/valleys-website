@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fonts (wired up via next/font in layout.tsx) */
-  --font-sans: var(--font-open-sans), system-ui, sans-serif;
-  --font-display: var(--font-poppins), system-ui, sans-serif;
+  /* Fonts (wired up via next/font in layout.tsx).
+     Both tokens resolve to Host Grotesk; the display/sans split is kept so
+     component classes stay meaningful if the families ever diverge again. */
+  --font-sans: var(--font-host-grotesk), system-ui, sans-serif;
+  --font-display: var(--font-host-grotesk), system-ui, sans-serif;
 
   /* Brand palette (from the design tokens) */
   --color-ink: #1e2444;
@@ -33,8 +35,8 @@
   /* Content max-widths (max-w-shell) */
   --container-shell: 1360px;
 
-  /* Nav collapses to a hamburger below this width */
-  --breakpoint-nav: 960px;
+  /* Nav collapses to a hamburger below this width (raised with the type scale) */
+  --breakpoint-nav: 1040px;
 }
 
 html {
