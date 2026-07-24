@@ -90,7 +90,7 @@ export default function Hero({
 
   const heading = (
     <h1
-      className="m-0 font-display font-bold leading-[1.12] text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.35)]"
+      className="m-0 font-display font-bold leading-[1.12] text-white"
       style={titleStyle}
     >
       {title}
