@@ -34,6 +34,7 @@ export default function HomePage() {
         height={640}
         titleSize={66}
         titleMaxWidth={700}
+        variant="cover"
         overlay="light"
         image="/images/valleys-project-hero.jpg"
         imageAlt="A tui perched on a flowering flax stem"
