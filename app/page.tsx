@@ -33,7 +33,7 @@ export default function HomePage() {
         title="The Valleys Conservation Project New Zealand"
         height={640}
         titleSize={66}
-        titleMaxWidth={560}
+        titleMaxWidth={700}
         overlay="light"
         image="/images/valleys-project-hero.jpg"
         imageAlt="A tui perched on a flowering flax stem"
