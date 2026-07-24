@@ -83,25 +83,32 @@ export default function Header() {
               <Caret className="opacity-60 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
             </button>
 
+            {/* Wrapper is flush to the trigger (top-full) with transparent pt-2,
+                so the 8px visual gap is still hoverable and the menu doesn't
+                flicker closed as the pointer travels from trigger to items. */}
             <div
-              role="menu"
-              className="pointer-events-none invisible absolute left-0 top-[calc(100%+8px)] z-[60] flex min-w-[236px] translate-y-[6px] flex-col rounded-md bg-white py-2 opacity-0 shadow-[0_10px_30px_rgba(0,0,0,0.15)] transition duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
+              className="pointer-events-none invisible absolute left-0 top-full z-[60] translate-y-[6px] pt-2 opacity-0 transition duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100"
             >
-              {aboutMenu.map((item) => {
-                const current = pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    role="menuitem"
-                    className={`whitespace-nowrap px-5 py-[10px] text-[15px] hover:bg-menu-hover ${
-                      current ? "font-semibold text-brand-active" : "font-normal text-ink"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
+              <div
+                role="menu"
+                className="flex min-w-[236px] flex-col rounded-md bg-white py-2 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
+              >
+                {aboutMenu.map((item) => {
+                  const current = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      role="menuitem"
+                      className={`whitespace-nowrap px-5 py-[10px] text-[15px] hover:bg-menu-hover ${
+                        current ? "font-semibold text-brand-active" : "font-normal text-ink"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

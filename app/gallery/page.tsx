@@ -33,14 +33,14 @@ export default function GalleryPage() {
       </Hero>
 
       <section className="bg-white px-5 pb-20 pt-16 sm:px-8">
-        <div className="mx-auto grid max-w-[640px] grid-cols-2 gap-3">
+        <div className="mx-auto grid max-w-[960px] grid-cols-2 gap-3 sm:grid-cols-3">
           {tiles.map((tile) => (
             <div key={tile.src} className="relative aspect-[4/3] overflow-hidden bg-[#eef0f2]">
               <Image
                 src={tile.src}
                 alt={tile.alt}
                 fill
-                sizes="(max-width: 640px) 50vw, 314px"
+                sizes="(max-width: 640px) 50vw, 312px"
                 className="object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
