@@ -86,8 +86,7 @@ export default function AboutPage() {
             />
           </div>
 
-          {/* Row 3: empty | Everyone can get involved */}
-          <div className="hidden md:block" />
+          {/* Row 3: Everyone can get involved | Further more */}
           <div>
             <SectionHeading>Everyone can get involved</SectionHeading>
             <p className="m-0 text-[17px] leading-[1.7] text-ink">
@@ -97,8 +96,6 @@ export default function AboutPage() {
               might otherwise never see is a unique gift – so talk to the boss!
             </p>
           </div>
-
-          {/* Row 4: Further more | kea */}
           <div>
             <SectionHeading>Further more</SectionHeading>
             <p className="m-0 text-[17px] leading-[1.7] text-ink">
@@ -116,15 +113,6 @@ export default function AboutPage() {
               – are <strong>TAX DEDUCTIBLE!</strong> DOC oversees all aspects of these
               activities, directs strategy and assists with logistics.
             </p>
-          </div>
-          <div className="relative h-[200px] max-w-[320px] self-start">
-            <Image
-              src="/images/kea.jpg"
-              alt="A kea perched on a mossy log"
-              fill
-              sizes="320px"
-              className="object-cover"
-            />
           </div>
         </div>
       </section>
