@@ -11,7 +11,7 @@ export default function TrappingPage() {
       <Hero
         title="Trapping methods"
         height={400}
-        titleSize={50}
+        titleSize={58}
         image="/images/valley-river.jpg"
         imageAlt="A bush-clad Fiordland valley and river bed"
       >

@@ -19,7 +19,7 @@ export default function AboutPage() {
       <Hero
         title="Adopt a Valley!"
         height={350}
-        titleSize={48}
+        titleSize={56}
         image="/images/belvedere-falls.jpg"
         imageAlt="Belvedere Falls in flood, Fiordland"
       >

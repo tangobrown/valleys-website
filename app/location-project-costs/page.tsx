@@ -55,7 +55,7 @@ export default function LocationPage() {
       <Hero
         title="Location & Project Costs"
         height={450}
-        titleSize={50}
+        titleSize={58}
         image="/images/dawn-camelot.jpg"
         imageAlt="Dawn over the Camelot Valley, Fiordland"
       >

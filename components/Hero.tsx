@@ -45,7 +45,7 @@ export default function Hero({
   priority = false,
   imagePosition,
   children,
-  titleSize = 50,
+  titleSize = 58,
   titleMaxWidth,
   wave = true,
   overlay = "soft",

@@ -31,7 +31,7 @@ export default function ContactPage() {
       <Hero
         title="Contact/Get Involved"
         height={370}
-        titleSize={50}
+        titleSize={58}
         image="/images/belvedere-falls.jpg"
         imageAlt="Belvedere Falls in flood, Fiordland"
       >

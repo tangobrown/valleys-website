@@ -32,7 +32,7 @@ export default function HomePage() {
       <Hero
         title="The Valleys Conservation Project New Zealand"
         height={640}
-        titleSize={57}
+        titleSize={66}
         titleMaxWidth={560}
         overlay="light"
         image="/images/valleys-project-hero.jpg"

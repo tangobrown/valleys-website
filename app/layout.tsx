@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Host_Grotesk } from "next/font/google";
+import { Host_Grotesk, Public_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GetInvolved from "@/components/GetInvolved";
 import "./globals.css";
 
-/* Single variable family (300–800) used for both display and body type. */
+/* Host Grotesk — display / headings / UI (font-display). */
 const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
   style: ["normal", "italic"],
   variable: "--font-host-grotesk",
+  display: "swap",
+});
+
+/* Public Sans — body / paragraph text (font-sans, inherited from <body>). */
+const publicSans = Public_Sans({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  variable: "--font-public-sans",
   display: "swap",
 });
 
@@ -24,7 +32,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={hostGrotesk.variable}>
+    <html lang="en" className={`${hostGrotesk.variable} ${publicSans.variable}`}>
       <body className="font-sans">
         <Header />
         <main>{children}</main>

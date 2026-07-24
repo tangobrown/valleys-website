@@ -2,9 +2,9 @@
 
 @theme {
   /* Fonts (wired up via next/font in layout.tsx).
-     Both tokens resolve to Host Grotesk; the display/sans split is kept so
-     component classes stay meaningful if the families ever diverge again. */
-  --font-sans: var(--font-host-grotesk), system-ui, sans-serif;
+     Display / headings / UI use Host Grotesk (font-display); body and
+     paragraph text use Public Sans (font-sans, inherited from <body>). */
+  --font-sans: var(--font-public-sans), system-ui, sans-serif;
   --font-display: var(--font-host-grotesk), system-ui, sans-serif;
 
   /* Brand palette (from the design tokens) */

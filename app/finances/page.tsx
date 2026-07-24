@@ -12,7 +12,7 @@ export default function FinancesPage() {
       <Hero
         title="Finances"
         height={400}
-        titleSize={50}
+        titleSize={58}
         image="/images/river-crossing.jpg"
         imageAlt="Team members crossing a Fiordland river"
       >

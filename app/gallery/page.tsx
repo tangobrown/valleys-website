@@ -23,7 +23,7 @@ export default function GalleryPage() {
       <Hero
         title="Gallery"
         height={290}
-        titleSize={46}
+        titleSize={54}
         image="/images/campfire.jpg"
         imageAlt="Team members around a campfire in the valley"
       >

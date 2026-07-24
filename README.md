@@ -37,9 +37,9 @@ Other scripts: `npm run build`, `npm run start`, `npm run lint`.
 
 ## Typography
 
-Everything is set in **Host Grotesk** (variable, 300–800, with italics), self-hosted via
-`next/font/google`. Both `--font-display` and `--font-sans` resolve to it, so the
-`font-display` / `font-sans` classes still describe intent if the families ever diverge.
+Two variable families, self-hosted via `next/font/google`: **Host Grotesk** for display,
+headings and UI (`--font-display`, the `font-display` class), and **Public Sans** for body /
+paragraph copy (`--font-sans`, inherited from `<body>` and via the `font-sans` class).
 
 ## Images
 
