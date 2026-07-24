@@ -1,27 +1,40 @@
+import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
-import { FinancesIcon, LocationIcon, TrappingIcon } from "@/components/icons";
+import { ArrowRight } from "@/components/icons";
 import { docUrl } from "@/lib/nav";
-import type { ReactNode } from "react";
 
-const infoCards: { icon: ReactNode; title: string; body: string; href: string }[] = [
+const infoCards: {
+  image: string;
+  alt: string;
+  title: string;
+  body: string;
+  href: string;
+  panel: string;
+}[] = [
   {
-    icon: <TrappingIcon className="h-[34px] w-[34px] text-brand" />,
+    image: "/images/stoat-trap.jpg",
+    alt: "A Goodnature A24 self-resetting trap mounted on a tree",
     title: "Trapping Methods",
     body: "The principle methodology for the VALLEYS PROJECT involves establishing lines of traps for stoats and rats along both sides of rivers at 100m intervals.",
     href: "/trapping-methods",
+    panel: "bg-ink",
   },
   {
-    icon: <FinancesIcon className="h-[34px] w-[34px] text-brand" />,
+    image: "/images/helicopter.jpg",
+    alt: "A helicopter landing on a riverbed to service trap lines",
     title: "Finances",
     body: "The VALLEYS PROJECT relies upon voluntary contributions from motivated people. In time, we hope these donations might be supplemented by government funding from projects with synergy.",
     href: "/finances",
+    panel: "bg-[#383a44]",
   },
   {
-    icon: <LocationIcon className="h-[34px] w-[34px] text-brand" />,
+    image: "/images/dawn-camelot.jpg",
+    alt: "Dawn over the Camelot Valley, Fiordland",
     title: "Location & Costs",
     body: "Our strategy is to establish trap lines adjacent to the Whio and Takahe protection areas west of Te Anau so they complement DOC’s existing conservation efforts.",
     href: "/location-project-costs",
+    panel: "bg-ink",
   },
 ];
 
@@ -77,22 +90,30 @@ export default function HomePage() {
       </section>
 
       {/* ===== Three info cards ===== */}
-      <section className="bg-lightgrey px-5 pb-[78px] pt-[60px] sm:px-8">
-        <div className="mx-auto grid max-w-[940px] grid-cols-1 gap-[34px] md:grid-cols-3">
+      <section className="bg-white px-5 pb-[78px] pt-[10px] sm:px-8">
+        <div className="mx-auto grid max-w-[1040px] grid-cols-1 gap-6 md:grid-cols-3">
           {infoCards.map((card) => (
-            <div
-              key={card.title}
-              className="flex flex-col bg-ink p-[30px] pt-[34px] shadow-[7px_7px_0_rgba(0,0,0,0.07)]"
-            >
-              <div className="mb-5">{card.icon}</div>
-              <h3 className="mb-[14px] font-display text-[24px] font-bold text-white">{card.title}</h3>
-              <p className="mb-[26px] flex-1 text-[17px] leading-[1.6] text-cardbody">{card.body}</p>
-              <Link
-                href={card.href}
-                className="block rounded-[2px] bg-brand px-[10px] py-[13px] text-center font-display text-[13px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
-              >
-                MORE INFO
-              </Link>
+            <div key={card.title} className="flex flex-col overflow-hidden">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={card.image}
+                  alt={card.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 330px"
+                  className="object-cover"
+                />
+              </div>
+              <div className={`flex flex-1 flex-col p-8 ${card.panel}`}>
+                <h3 className="mb-4 font-display text-[26px] font-bold text-white">{card.title}</h3>
+                <p className="mb-7 flex-1 text-[16px] leading-[1.6] text-white/70">{card.body}</p>
+                <Link
+                  href={card.href}
+                  className="group inline-flex items-center gap-2 font-display text-[15px] font-semibold text-white"
+                >
+                  Learn more
+                  <ArrowRight className="h-[18px] w-[18px] transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
