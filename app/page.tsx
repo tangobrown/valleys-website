@@ -59,10 +59,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== Two-column block with grey band behind lower portion ===== */}
-      <div className="relative pb-[70px]">
-        <div className="absolute inset-x-0 bottom-0 z-0 h-[170px] bg-lightgrey" aria-hidden />
-        <div className="relative z-[1] mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-14 px-5 pt-[52px] sm:px-8 md:grid-cols-2">
+      {/* ===== Two-column block ===== */}
+      <div className="pb-[70px]">
+        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-14 px-5 pt-[52px] sm:px-8 md:grid-cols-2">
           <div>
             <Image
               src="/images/fantail.jpg"
@@ -98,7 +97,7 @@ export default function HomePage() {
       </div>
 
       {/* ===== Three info cards ===== */}
-      <section className="bg-white px-5 pb-[78px] pt-[60px] sm:px-8">
+      <section className="bg-lightgrey px-5 pb-[78px] pt-[60px] sm:px-8">
         <div className="mx-auto grid max-w-[940px] grid-cols-1 gap-[34px] md:grid-cols-3">
           {infoCards.map((card) => (
             <div
