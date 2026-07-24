@@ -54,7 +54,7 @@ export default function ContactPage() {
               {involvementBlurbs.map((b) => (
                 <div key={b.title}>
                   <h3
-                    className={`mb-[5px] font-display text-[24px] text-heading ${
+                    className={`mb-[10px] border-b border-inputborder pb-[8px] font-display text-[24px] text-heading ${
                       b.italic ? "font-bold italic" : "font-extrabold"
                     }`}
                   >
