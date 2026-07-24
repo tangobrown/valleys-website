@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import { FinancesIcon, LocationIcon, TrappingIcon } from "@/components/icons";
@@ -48,30 +47,16 @@ export default function HomePage() {
         </Link>
       </Hero>
 
-      {/* ===== Protecting intro ===== */}
-      <section className="bg-white px-5 pt-[74px] sm:px-8">
-        <div className="mx-auto max-w-[1040px] text-center">
-          <h2 className="mb-[18px] font-display text-[48px] font-bold text-heading">
-            Protecting New Zealand Birdlife
-          </h2>
-          <p className="m-0 text-[17px] font-bold text-ink">
-            Through Significant Yet Affordable Conservation Projects protecting birdlife against pests.
-          </p>
-        </div>
-      </section>
-
-      {/* ===== Two-column block ===== */}
-      <div className="pb-[70px]">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-14 px-5 pt-[52px] sm:px-8 md:grid-cols-2">
+      {/* ===== Protecting intro — heading left, body right ===== */}
+      <section className="bg-white px-5 py-[74px] sm:px-8">
+        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-14 md:grid-cols-2">
           <div>
-            <Image
-              src="/images/fantail.jpg"
-              alt="A fantail (pīwakawaka) perched on a mossy branch in native bush"
-              width={800}
-              height={533}
-              sizes="(max-width: 768px) 100vw, 490px"
-              className="h-[262px] w-full object-cover"
-            />
+            <h2 className="m-0 mb-[18px] font-display text-[48px] font-bold leading-[1.1] text-heading">
+              Protecting New Zealand Birdlife
+            </h2>
+            <p className="m-0 text-[17px] font-bold text-ink">
+              Through Significant Yet Affordable Conservation Projects protecting birdlife against pests.
+            </p>
           </div>
           <div className="text-[17px] leading-[1.65] text-ink">
             <p className="mb-[18px]">
@@ -82,20 +67,14 @@ export default function HomePage() {
               </a>{" "}
               is not adequately funded for the Herculean tasks it faces.
             </p>
-            <p className="mb-[26px]">
+            <p className="m-0">
               There is a growing realisation amongst New Zealanders that we can’t just sit back and “let the government do
               it”. If we want to preserve our natural heritage, Kiwis have to get out there and help, and also to
               contribute financially.
             </p>
-            <Link
-              href="/about-the-project"
-              className="inline-block rounded-[3px] bg-brand px-[26px] py-[14px] font-display text-[14px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
-            >
-              ADOPT A VALLEY
-            </Link>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ===== Three info cards ===== */}
       <section className="bg-lightgrey px-5 pb-[78px] pt-[60px] sm:px-8">
