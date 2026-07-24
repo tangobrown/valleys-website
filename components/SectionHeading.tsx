@@ -6,7 +6,7 @@ interface SectionHeadingProps {
   size?: number;
 }
 
-export default function SectionHeading({ children, gap = 20, as = "h2", size = 38 }: SectionHeadingProps) {
+export default function SectionHeading({ children, gap = 20, as = "h2", size = 48 }: SectionHeadingProps) {
   const Tag = as;
   return (
     <>
