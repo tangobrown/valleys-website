@@ -1,5 +1,29 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
+import { donateUrl } from "@/lib/nav";
+
+/* Get Involved + Donate Now CTA pair, shown under the text in interior heroes. */
+function HeroButtons() {
+  return (
+    <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+      <Link
+        href="/contact"
+        className="inline-flex items-center justify-center rounded-[3px] bg-brand px-7 py-[13px] font-display text-[14px] font-semibold tracking-[1px] text-white transition-colors hover:bg-brand-hover"
+      >
+        Get Involved
+      </Link>
+      <a
+        href={donateUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center rounded-[3px] border border-white/80 px-7 py-[13px] font-display text-[14px] font-semibold tracking-[1px] text-white transition-colors hover:bg-white/10"
+      >
+        Donate Now
+      </a>
+    </div>
+  );
+}
 
 interface HeroProps {
   title: string;
@@ -75,8 +99,13 @@ export default function Hero({
 
   /* ---- Interior pages: navy background + right-side image panel ---- */
   if (variant === "panel") {
+    // min-height (not fixed height) so the hero grows to fit the text + CTAs
+    // on narrow screens instead of clipping them.
+    const minHeightStyle = {
+      minHeight: `clamp(${Math.round(height * 0.6)}px, ${(height / 12).toFixed(1)}vw, ${height}px)`,
+    };
     return (
-      <section className="relative w-full overflow-hidden bg-ink" style={heightStyle}>
+      <section className="relative flex w-full items-center overflow-hidden bg-ink" style={minHeightStyle}>
         {/* Right image panel — full height, ~⅓ width, blended into the navy on its left edge */}
         <div
           role="img"
@@ -90,11 +119,12 @@ export default function Hero({
           />
         </div>
 
-        {/* Text — kept clear of the panel */}
-        <div className="relative mx-auto flex h-full max-w-shell flex-col justify-center px-5 pb-10 sm:px-8">
+        {/* Text + CTAs — kept clear of the panel; extra bottom padding clears the wave */}
+        <div className="relative mx-auto w-full max-w-shell px-5 pb-[64px] pt-10 sm:px-8">
           <div className="max-w-[54%] sm:max-w-[62%]">
             {heading}
             {children}
+            <HeroButtons />
           </div>
         </div>
 
