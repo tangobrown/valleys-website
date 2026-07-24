@@ -67,7 +67,7 @@ export default function LocationPage() {
 
       {/* ===== Estimates row ===== */}
       <section className="bg-white px-5 pb-10 pt-[74px] sm:px-8">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-[60px] md:grid-cols-2">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-[60px] md:grid-cols-2">
           <div>
             <Image
               src="/images/blue-ducks.jpg"
@@ -99,7 +99,7 @@ export default function LocationPage() {
 
       {/* ===== Valley map grid ===== */}
       <section className="bg-white px-5 pb-20 pt-[30px] sm:px-8">
-        <div className="mx-auto max-w-[1040px]">
+        <div className="mx-auto max-w-[1120px]">
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 nav:grid-cols-4">
             {valleys.map((name) => (
               <ValleyTile key={name} name={name} />

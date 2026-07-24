@@ -30,7 +30,7 @@ export default function AboutPage() {
       </Hero>
 
       <section className="bg-white px-5 pb-10 pt-[70px] sm:px-8">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-x-[60px] gap-y-14 md:grid-cols-2">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-x-[60px] gap-y-14 md:grid-cols-2">
           {/* Row 1: blue duck | What is */}
           <div className="self-start">
             <Image

@@ -33,7 +33,7 @@ export default function GalleryPage() {
       </Hero>
 
       <section className="bg-white px-5 pb-20 pt-16 sm:px-8">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-2 gap-3">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-2 gap-3">
           {tiles.map((tile) => (
             <div key={tile.src} className="relative aspect-[4/3] overflow-hidden bg-[#eef0f2]">
               <Image

@@ -62,7 +62,7 @@ export default function HomePage() {
 
       {/* ===== Protecting intro — heading left, body right ===== */}
       <section className="bg-white px-5 py-[74px] sm:px-8">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-14 md:grid-cols-2">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-14 md:grid-cols-2">
           <div>
             <h2 className="m-0 mb-[18px] font-display text-[48px] font-bold leading-[1.1] text-heading">
               Protecting New Zealand Birdlife
@@ -91,7 +91,7 @@ export default function HomePage() {
 
       {/* ===== Three info cards ===== */}
       <section className="bg-white px-5 pb-[78px] pt-[10px] sm:px-8">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 gap-6 md:grid-cols-3">
           {infoCards.map((card) => (
             <div key={card.title} className="flex flex-col overflow-hidden">
               <div className="relative aspect-[4/3]">

@@ -22,7 +22,7 @@ export default function TrappingPage() {
       </Hero>
 
       <section className="bg-white px-5 pb-10 pt-[78px] sm:px-8">
-        <div className="mx-auto grid max-w-[1040px] grid-cols-1 items-start gap-x-[60px] gap-y-[70px] md:grid-cols-2">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-x-[60px] gap-y-[70px] md:grid-cols-2">
           {/* Row 1: stoat | Trapping Strategy */}
           <div className="self-start">
             <Image

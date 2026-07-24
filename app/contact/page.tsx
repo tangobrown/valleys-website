@@ -44,7 +44,7 @@ export default function ContactPage() {
       </Hero>
 
       <section className="bg-white px-5 pb-10 pt-[74px] sm:px-8">
-        <div className="mx-auto grid max-w-[1100px] grid-cols-1 items-start gap-16 lg:grid-cols-[1.35fr_1fr]">
+        <div className="mx-auto grid max-w-[1160px] grid-cols-1 items-start gap-16 lg:grid-cols-[1.35fr_1fr]">
           {/* Form */}
           <ContactForm />
 
