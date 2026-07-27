@@ -15,14 +15,18 @@ const ageOptions = ["< 20 yr", "21-30 yr", "31-40 yr", "41-50 yr", "51-60 yr", "
 const inputBase =
   "w-full rounded-[3px] border bg-white px-[13px] py-[11px] font-sans text-[15px] text-slate outline-none transition-colors focus:border-brand";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvgarvg";
+
 type Errors = Partial<Record<"name" | "email" | "phone" | "town", string>>;
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<Errors>({});
   const formRef = useRef<HTMLFormElement>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -41,9 +45,28 @@ export default function ContactForm() {
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    // Production: POST to a real endpoint / form service here.
-    setSubmitted(true);
-    if (typeof window !== "undefined") window.scrollTo({ top: 300, behavior: "smooth" });
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setSubmitted(true);
+        if (typeof window !== "undefined") window.scrollTo({ top: 300, behavior: "smooth" });
+      } else {
+        const json = (await res.json().catch(() => null)) as { errors?: { message: string }[] } | null;
+        setSubmitError(
+          json?.errors?.map((err) => err.message).join(", ") || "Something went wrong. Please try again.",
+        );
+      }
+    } catch {
+      setSubmitError("Couldn’t send your message. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -67,6 +90,9 @@ export default function ContactForm() {
       <SectionHeading gap={28}>Send a message</SectionHeading>
 
       <form ref={formRef} noValidate onSubmit={handleSubmit} className="flex flex-col gap-[22px]">
+        {/* Honeypot — hidden from real users, catches bots */}
+        <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+
         {/* Name / Email / Phone / Town */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label="Name" name="name" type="text" required error={errors.name} />
@@ -139,10 +165,12 @@ export default function ContactForm() {
         <div>
           <button
             type="submit"
-            className="cursor-pointer rounded-[3px] bg-brand px-10 py-[14px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
+            disabled={submitting}
+            className="cursor-pointer rounded-[3px] bg-brand px-10 py-[14px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover disabled:cursor-not-allowed disabled:opacity-70"
           >
-            Submit
+            {submitting ? "Sending…" : "Submit"}
           </button>
+          {submitError && <p className="m-0 mt-3 text-[14px] text-req">{submitError}</p>}
         </div>
       </form>
     </div>
