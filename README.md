@@ -50,6 +50,7 @@ SVG topographic stand-ins pending real DOC map thumbnails.
 
 ## Contact form
 
-Client-side only: validates required fields (Name, Email, Phone, Town) + email format, then
-shows the success panel. Wire the `handleSubmit` in `components/ContactForm.tsx` to a real
-email/form endpoint for production.
+Validates required fields (Name, Email, Phone, Town) + email format client-side, then submits
+to **Formspree** via AJAX (`fetch` with `Accept: application/json`) and shows the success panel
+without leaving the page. Includes a sending state, a submit-error message, and a `_gotcha`
+honeypot. The endpoint (`FORMSPREE_ENDPOINT`) lives at the top of `components/ContactForm.tsx`.
