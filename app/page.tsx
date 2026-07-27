@@ -62,7 +62,7 @@ export default function HomePage() {
 
       {/* ===== Protecting intro — heading left, body right ===== */}
       <section className="bg-white px-5 py-[74px] sm:px-8">
-        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-14 md:grid-cols-2">
+        <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-y-14 md:grid-cols-2 md:gap-x-[80px]">
           <div>
             <h2 className="m-0 mb-[18px] font-display text-[48px] font-bold leading-[1.1] text-heading">
               Protecting New Zealand Birdlife
