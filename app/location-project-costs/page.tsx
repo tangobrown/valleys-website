@@ -75,7 +75,7 @@ export default function LocationPage() {
               width={1000}
               height={667}
               sizes="(max-width: 768px) 100vw, 490px"
-              className="block h-auto w-full"
+              className="block h-[260px] w-full object-cover md:h-[400px]"
             />
           </div>
           <div>

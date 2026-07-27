@@ -24,7 +24,7 @@ export default function FinancesPage() {
       <section className="bg-white px-5 pb-10 pt-[78px] sm:px-8">
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-x-[60px] gap-y-[70px] md:grid-cols-2">
           {/* Row 1: whio | Volunteer Contributions */}
-          <div className="relative h-[220px] self-start">
+          <div className="relative h-[260px] self-start md:h-[400px]">
             <Image
               src="/images/whio-closeup.jpg"
               alt="A whio (blue duck) standing on river rocks"
@@ -71,7 +71,7 @@ export default function FinancesPage() {
               DONATE NOW
             </a>
           </div>
-          <div className="relative h-[200px] self-start">
+          <div className="relative h-[260px] self-start md:h-[400px]">
             <Image
               src="/images/helicopter.jpg"
               alt="A helicopter landing on a riverbed to service trap lines"

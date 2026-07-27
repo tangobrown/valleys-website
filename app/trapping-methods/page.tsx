@@ -31,7 +31,7 @@ export default function TrappingPage() {
               width={1024}
               height={512}
               sizes="(max-width: 768px) 100vw, 490px"
-              className="block h-auto w-full"
+              className="block h-[260px] w-full object-cover md:h-[400px]"
             />
           </div>
           <div>
@@ -82,7 +82,7 @@ export default function TrappingPage() {
               valley floors to assist Kiwi and our other iconic species.
             </p>
           </div>
-          <div className="relative h-[230px] self-start">
+          <div className="relative h-[260px] self-start md:h-[400px]">
             <Image
               src="/images/solo-whio.jpg"
               alt="A lone whio (blue duck) standing in a shallow river"
@@ -93,7 +93,7 @@ export default function TrappingPage() {
           </div>
 
           {/* Row 3: trail cam | Trapping equipment */}
-          <div className="relative h-[230px] self-start">
+          <div className="relative h-[260px] self-start md:h-[400px]">
             <Image
               src="/images/trail-cam-deer.jpg"
               alt="Trail camera image of a deer beside a trap mounted on a mossy tree"
@@ -139,7 +139,7 @@ export default function TrappingPage() {
               shelter.
             </p>
           </div>
-          <div className="relative h-[230px] self-start">
+          <div className="relative h-[260px] self-start md:h-[400px]">
             <Image
               src="/images/team-camp.jpg"
               alt="The initial team at camp in the Cozette Valley"

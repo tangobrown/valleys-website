@@ -39,7 +39,7 @@ export default function AboutPage() {
               width={1000}
               height={667}
               sizes="(max-width: 768px) 100vw, 490px"
-              className="block h-auto w-full"
+              className="block h-[260px] w-full object-cover md:h-[400px]"
             />
           </div>
           <div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
               can help with relationships, logistics and equipment.
             </p>
           </div>
-          <div className="relative h-[230px] self-start">
+          <div className="relative h-[260px] self-start md:h-[400px]">
             <Image
               src="/images/three-men-valley.jpg"
               alt="Three team members standing in a Fiordland river"
