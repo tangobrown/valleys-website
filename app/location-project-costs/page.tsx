@@ -7,20 +7,26 @@ import { MapPin } from "@/components/icons";
 export const metadata: Metadata = { title: "Location & Project Costs" };
 
 const valleys = [
-  "Freeman Burn",
-  "Awe Burn",
-  "Hidden Falls Creek",
-  "Bowen River",
-  "Iris Burn",
-  "Diamond Creek",
-  "Talbot River",
-  "Surprise Creek",
+  { name: "Freeman Burn", map: "/maps/Freeman.pdf" },
+  { name: "Awe Burn", map: "/maps/Awe.pdf" },
+  { name: "Hidden Falls Creek", map: "/maps/Hidden-Falls.pdf" },
+  { name: "Bowen River", map: "/maps/Bowen.pdf" },
+  { name: "Iris Burn", map: "/maps/Iris.pdf" },
+  { name: "Diamond Creek", map: "/maps/Diamond-Creek.pdf" },
+  { name: "Talbot River", map: "/maps/Talbot.pdf" },
+  { name: "Surprise Creek", map: "/maps/Surprise.pdf" },
 ];
 
-/* Abstract topographic map tile — a stand-in for real DOC map thumbnails. */
-function ValleyTile({ name }: { name: string }) {
+/* Each tile links to that valley's map PDF (opens in a new tab). */
+function ValleyTile({ name, map }: { name: string; map: string }) {
   return (
-    <div className="relative aspect-[5/4] overflow-hidden bg-[#5a6b78]">
+    <a
+      href={map}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Open the ${name} map (PDF, opens in a new tab)`}
+      className="group relative block aspect-[5/4] overflow-hidden bg-[#5a6b78]"
+    >
       <svg viewBox="0 0 200 160" preserveAspectRatio="xMidYMid slice" className="absolute inset-0 h-full w-full">
         <rect width="200" height="160" fill="#6a7a86" />
         <g fill="none" stroke="#7d8c96" strokeWidth="1">
@@ -38,14 +44,17 @@ function ValleyTile({ name }: { name: string }) {
           opacity="0.8"
         />
       </svg>
-      <div className="absolute inset-0 bg-[#2c3f52] opacity-55" />
+      <div className="absolute inset-0 bg-[#2c3f52] opacity-55 transition-opacity group-hover:opacity-40" />
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-[14px]">
         <MapPin className="h-[30px] w-[30px] text-white" />
         <span className="text-center font-display text-[14px] font-bold uppercase leading-[1.3] tracking-[1.2px] text-white">
           {name}
         </span>
+        <span className="font-display text-[11px] font-semibold uppercase tracking-[1px] text-white/85 opacity-0 transition-opacity group-hover:opacity-100">
+          View map (PDF)
+        </span>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -101,8 +110,8 @@ export default function LocationPage() {
       <section className="bg-white px-5 pb-20 pt-[30px] sm:px-8">
         <div className="mx-auto max-w-[1120px]">
           <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 nav:grid-cols-4">
-            {valleys.map((name) => (
-              <ValleyTile key={name} name={name} />
+            {valleys.map((v) => (
+              <ValleyTile key={v.name} name={v.name} map={v.map} />
             ))}
           </div>
         </div>
