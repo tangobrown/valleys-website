@@ -66,7 +66,7 @@ export default function FinancesPage() {
               href={donateUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-[3px] bg-brand px-[26px] py-[14px] font-display text-[14px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
+              className="inline-block rounded-[3px] bg-brand px-[26px] py-[14px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
             >
               DONATE NOW
             </a>

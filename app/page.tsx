@@ -54,7 +54,7 @@ export default function HomePage() {
       >
         <Link
           href="/contact"
-          className="mt-[34px] self-start rounded-[3px] bg-brand px-[30px] py-4 font-display text-[15px] font-semibold tracking-[1.5px] text-white transition-colors hover:bg-brand-hover"
+          className="mt-[34px] self-start rounded-[3px] bg-brand px-[30px] py-4 font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
         >
           GET INVOLVED
         </Link>

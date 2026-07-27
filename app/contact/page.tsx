@@ -67,7 +67,7 @@ export default function ContactPage() {
                 href={donateUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 inline-block self-start rounded-[3px] bg-brand px-7 py-[13px] font-display text-[14px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
+                className="mt-1 inline-block self-start rounded-[3px] bg-brand px-7 py-[13px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
               >
                 DONATE NOW
               </a>

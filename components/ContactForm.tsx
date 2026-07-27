@@ -139,7 +139,7 @@ export default function ContactForm() {
         <div>
           <button
             type="submit"
-            className="cursor-pointer rounded-[3px] bg-brand px-10 py-[14px] font-display text-[15px] font-semibold tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
+            className="cursor-pointer rounded-[3px] bg-brand px-10 py-[14px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
           >
             Submit
           </button>

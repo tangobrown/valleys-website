@@ -9,7 +9,7 @@ function HeroButtons() {
     <div className="mt-7 flex flex-col gap-3 sm:flex-row">
       <Link
         href="/contact"
-        className="inline-flex items-center justify-center rounded-[3px] bg-brand px-7 py-[13px] font-display text-[14px] font-semibold tracking-[1px] text-white transition-colors hover:bg-brand-hover"
+        className="inline-flex items-center justify-center rounded-[3px] bg-brand px-7 py-[13px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-brand-hover"
       >
         Get Involved
       </Link>
@@ -17,7 +17,7 @@ function HeroButtons() {
         href={donateUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-[3px] border border-white/80 px-7 py-[13px] font-display text-[14px] font-semibold tracking-[1px] text-white transition-colors hover:bg-white/10"
+        className="inline-flex items-center justify-center rounded-[3px] border border-white/80 px-7 py-[13px] font-display text-[14px] font-semibold uppercase tracking-[1.3px] text-white transition-colors hover:bg-white/10"
       >
         Donate Now
       </a>
