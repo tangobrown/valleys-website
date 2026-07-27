@@ -7,6 +7,6 @@ export const aboutMenu = [
 
 export const aboutSectionPaths = aboutMenu.map((i) => i.href) as string[];
 
-export const facebookUrl = "https://www.facebook.com/";
+export const facebookUrl = "https://www.facebook.com/valleysconservation/";
 export const donateUrl = "https://nznaturefund.org/projects/the-valleys/";
 export const docUrl = "http://www.doc.govt.nz/";
