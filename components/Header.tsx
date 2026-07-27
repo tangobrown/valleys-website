@@ -1,19 +1,23 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { aboutMenu, aboutSectionPaths, facebookUrl } from "@/lib/nav";
-import { Caret, CloseIcon, LogoMark, MenuIcon } from "./icons";
+import { Caret, CloseIcon, MenuIcon } from "./icons";
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-3" aria-label="Valleys Project — home">
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-[28px] font-extrabold tracking-[0.5px] text-ink">VALLEYS</span>
-        <span className="mt-[3px] font-display text-[12px] font-semibold tracking-[5px] text-brand">PROJECT</span>
-      </span>
-      <LogoMark className="block" />
+    <Link href="/" className="flex items-center" aria-label="Valleys Project — home">
+      <Image
+        src="/images/logo.png"
+        alt="The Valleys Project"
+        width={340}
+        height={74}
+        priority
+        className="h-[46px] w-auto"
+      />
     </Link>
   );
 }
@@ -150,9 +154,7 @@ export default function Header() {
           />
           <div className="absolute right-0 top-0 flex h-full w-[82%] max-w-[340px] flex-col overflow-y-auto bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-black/5 px-5 py-4">
-              <span className="font-display text-[20px] font-extrabold tracking-[0.5px] text-ink">
-                VALLEYS<span className="ml-1 text-[12px] font-semibold tracking-[3px] text-brand">PROJECT</span>
-              </span>
+              <Image src="/images/logo.png" alt="The Valleys Project" width={340} height={74} className="h-9 w-auto" />
               <button type="button" aria-label="Close menu" onClick={() => setMobileOpen(false)} className="text-ink">
                 <CloseIcon className="h-6 w-6" />
               </button>
