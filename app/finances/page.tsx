@@ -81,8 +81,16 @@ export default function FinancesPage() {
             />
           </div>
 
-          {/* Row 3: empty | Trap line costs */}
-          <div className="hidden md:block" />
+          {/* Row 3: team | Trap line costs */}
+          <div className="relative h-[260px] self-start md:h-[400px]">
+            <Image
+              src="/images/team-by-river.jpg"
+              alt="Three team members beside a river pool below a waterfall"
+              fill
+              sizes="(max-width: 768px) 100vw, 490px"
+              className="object-cover"
+            />
+          </div>
           <div>
             <SectionHeading gap={22}>Trap line costs</SectionHeading>
             <p className="mb-[18px] text-[17px] leading-[1.7] text-ink">
