@@ -16,7 +16,7 @@ export default function GetInvolved() {
         aria-hidden
       />
       <div className="relative z-[2] mx-auto max-w-[940px] text-center">
-        <h2 className="mb-[42px] font-display text-[48px] font-bold text-white">
+        <h2 className="mb-[42px] font-display text-[48px] font-bold leading-[1.2] text-white">
           How can you get involved?
         </h2>
         <div className="grid auto-rows-fr grid-cols-2 gap-5 nav:grid-cols-4">

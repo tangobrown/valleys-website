@@ -64,7 +64,7 @@ export default function HomePage() {
       <section className="bg-white px-5 py-[74px] sm:px-8">
         <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-y-14 md:grid-cols-2 md:gap-x-[80px]">
           <div>
-            <h2 className="m-0 mb-[18px] font-display text-[48px] font-bold leading-[1.1] text-heading">
+            <h2 className="m-0 mb-[18px] font-display text-[48px] font-bold leading-[1.2] text-heading">
               Protecting New Zealand Birdlife
             </h2>
             <p className="m-0 text-[17px] font-bold text-ink">

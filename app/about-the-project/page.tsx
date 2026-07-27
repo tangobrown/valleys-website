@@ -119,20 +119,20 @@ export default function AboutPage() {
 
       {/* ===== Committee ===== */}
       <section id="committee" className="scroll-mt-24 bg-lightgrey px-5 pb-[74px] pt-16 sm:px-8">
-        <div className="mx-auto max-w-[940px] text-center">
+        <div className="mx-auto max-w-[1120px] text-center">
           <GroupIcon className="mx-auto mb-[14px] block h-10 w-10 text-brand" />
-          <h2 className="mb-[46px] font-display text-[21px] font-bold uppercase tracking-[2px] text-heading">
+          <h2 className="mb-[46px] font-display text-[21px] font-bold uppercase leading-[1.2] tracking-[2px] text-heading">
             Valleys Group Committee
           </h2>
-          <div className="mx-auto grid max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
             {committee.map((m) => (
               <div key={m.name} className="text-left">
-                <div className="relative mb-[14px] h-[120px] overflow-hidden">
+                <div className="relative mb-[18px] aspect-[4/3] overflow-hidden">
                   <Image
                     src={m.photo}
                     alt={`${m.name}, ${m.role}`}
                     fill
-                    sizes="(max-width: 640px) 100vw, 240px"
+                    sizes="(max-width: 640px) 100vw, 360px"
                     className="object-cover object-top"
                   />
                 </div>
