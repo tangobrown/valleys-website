@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s — Valleys Project",
   },
   description:
-    "A Fiordland predator-trapping conservation initiative run in partnership with DOC and the NZ National Parks & Conservation Foundation. Protecting New Zealand birdlife through significant yet affordable conservation projects.",
+    "A Fiordland predator-trapping conservation initiative run in partnership with DOC and the NZ Nature Fund. Protecting New Zealand birdlife through significant yet affordable conservation projects.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

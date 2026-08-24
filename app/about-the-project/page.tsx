@@ -50,13 +50,16 @@ export default function AboutPage() {
               <a href={docUrl} target="_blank" rel="noopener noreferrer" className="prose-link">
                 DOC
               </a>{" "}
-              and the NZ National Parks &amp; Conservation Foundation. These projects aim to adjust the balance in favour
-              of our birdlife by trapping predators in areas currently without any control measures. They will combine
-              strategically with DOC’s existing work and other VALLEYS Projects to become part of a greater whole. We
-              seek to involve like-minded individuals who would enjoy the opportunity to visit remote areas regularly,
-              and who are prepared to contribute financially to conservation work. There is the opportunity to give your
-              time in the backcountry a real purpose, enjoy companionship and the satisfaction that comes from being
-              involved in a worthwhile endeavour.
+              and the{" "}
+              <a href="https://nznaturefund.org/" target="_blank" rel="noopener noreferrer" className="prose-link">
+                NZ Nature Fund
+              </a>
+              . These projects aim to adjust the balance in favour of our birdlife by trapping predators in areas
+              currently without any control measures. They will combine strategically with DOC’s existing work and other
+              VALLEYS Projects to become part of a greater whole. We seek to involve like-minded individuals who would
+              enjoy the opportunity to visit remote areas regularly, and who are prepared to contribute financially to
+              conservation work. There is the opportunity to give your time in the backcountry a real purpose, enjoy
+              companionship and the satisfaction that comes from being involved in a worthwhile endeavour.
             </p>
           </div>
 

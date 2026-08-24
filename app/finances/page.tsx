@@ -51,16 +51,20 @@ export default function FinancesPage() {
           <div>
             <SectionHeading gap={22}>Donations</SectionHeading>
             <p className="mb-[18px] text-[17px] leading-[1.7] text-ink">
-              The New Zealand National Parks Conservation Foundation (NPCF) Donation Portal accepts tax deductible
-              donations on our behalf, issues receipts and administers the financial aspects with DOC.
+              The{" "}
+              <a href="https://nznaturefund.org/" target="_blank" rel="noopener noreferrer" className="prose-link">
+                NZ Nature Fund
+              </a>{" "}
+              Donation Portal accepts tax deductible donations on our behalf, issues receipts and administers the
+              financial aspects with DOC.
             </p>
             <p className="mb-[26px] text-[17px] leading-[1.7] text-ink">
               Donations are primarily used to purchase traps and supplies for the traps. Individuals involved in field
-              trips may separately cover the costs of helicopter transport and groceries by donations to NPCF. The
-              invoices for equipment, helicopter transport and groceries are paid by DOC and subsequently invoiced to
-              NPCF by DOC. This ensures that the money donated is applied directly to the designated projects and used as
-              efficiently as possible. Donors can be certain that 100% of their funds are applied directly to the
-              intended activity.
+              trips may separately cover the costs of helicopter transport and groceries by donations to the NZ Nature
+              Fund. The invoices for equipment, helicopter transport and groceries are paid by DOC and subsequently
+              invoiced to the NZ Nature Fund by DOC. This ensures that the money donated is applied directly to the
+              designated projects and used as efficiently as possible. Donors can be certain that 100% of their funds
+              are applied directly to the intended activity.
             </p>
             <a
               href={donateUrl}
